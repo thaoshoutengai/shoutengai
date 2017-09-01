@@ -1,0 +1,47 @@
+﻿<div class="page-content">
+    <div ng-include="'views/top-toolbar.html'"></div>
+    <div class="event-detail">
+        <div class="custom-nav">イベント一覧 > イベント詳細</div>
+        <div class="row row-eq-height no-margin">
+            <div class="col-xs-6 no-padding">
+                <div class="event-picture"> <div class="vertical-middle">Event Picture</div> </div>
+                <div class="btn btn-sm shop-share-btn">
+                    Twitterでシェア
+                </div>
+                <div class="btn btn-sm shop-share-btn">
+                    Facebookでシェア
+                </div>
+            </div>
+
+            <div class="detail-box col-xs-6">
+                <div class="row row-eq-height no-margin ">
+                    <div class="col col-xs-6">開始日</div>
+                    <div class="col col-xs-6"> </div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6">終了日</div>
+                    <div class="col col-xs-6"></div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6">曜日・時間</div>
+                    <div class="col col-xs-6"></div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6">イベント名</div>
+                    <div class="col col-xs-6"></div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6">イベント内容</div>
+                    <div class="col col-xs-6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map_canvas" class="half-map"></div>
+
+    <div class="bottom-buttons ">
+        <div class="col-xs-3 col-xs-offset-9">
+            <div class="btn btn-default btn-sm" ng-click="fnPageMove('main_screen')"> 閉じる</div>
+        </div>
+    </div>
+</div>

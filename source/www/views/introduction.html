@@ -1,0 +1,43 @@
+﻿<div class="page-content">
+    <div ng-include="'views/top-toolbar.html'"></div>
+    <div class="introduction">
+        <div class="custom-nav">商店街紹介</div>
+        <div class="row row-eq-height no-margin">
+            <div class="col-xs-6 no-padding">
+                <div class="market-picture"> <div class="vertical-middle">Market Picture</div> </div>
+                <div class="btn btn-sm shop-share-btn">
+                    Twitterでシェア
+                </div>
+                <div class="btn btn-sm shop-share-btn">
+                    Facebookでシェア
+                </div>
+            </div>
+
+            <div class="introduction-box col-xs-6">
+                <div class="row row-eq-height no-margin ">
+                    <div class="col col-xs-6 no-padding">都道府県</div>
+                    <div class="col col-xs-6 no-padding">{{shoutengai.prefecture}}</div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6 no-padding">市区町村</div>
+                    <div class="col col-xs-6 no-padding">{{shoutengai.city}}</div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6 no-padding">最寄駅</div>
+                    <div class="col col-xs-6 no-padding">{{shoutengai.station}}</div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6 no-padding">商店街名</div>
+                    <div class="col col-xs-6 no-padding">{{shoutengai.name}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map_canvas" class="half-map"></div>
+
+    <div class="bottom-buttons ">
+        <div class="col-xs-3 col-xs-offset-9">
+            <div class="btn btn-default btn-sm" ng-click="fnPageMove('main_screen')"> 閉じる</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿<div class="page-content">
+    <div ng-include="'views/top-toolbar.html'"></div>
+    <div class="point-list">
+        <div class="custom-nav">ポイント一覧</div>
+        
+        <table class="list-box">
+            <thead>
+                <tr>
+                    <td> 店舗名 </td>
+                    <td> カテゴリ</td>
+                    <td> </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="i in [1, 2, 3, 4, 5, 1, 2] track by $index">
+                    <td></td>
+                    <td></td>
+                    <td><button class="btn btn-default btn-sm"  ng-click="fnPageMove('point_detail', {id : i})">詳細</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="map_canvas" class="half-map"></div>
+
+    <div class="bottom-buttons ">
+        <div class="col-xs-3 col-xs-offset-9">
+            <div class="btn btn-default btn-sm" ng-click="fnPageMove('main_screen')"> 閉じる</div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,31 @@
+﻿<div class="page-content">
+    <div ng-include="'views/top-toolbar.html'"></div>
+    <div class="information">
+        <div class="custom-nav">お知らせ</div>
+        
+        <table class="info-box">
+            <thead>
+                <tr>
+                    <td>日付</td>
+                    <td>文言</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="i in [1, 2, 3 ] track by $index">
+                    <td >{{ currentDate(i) | date:'yyyy/MM/dd'}}</td>
+                    <td> OOO </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="map_canvas" class="half-map"></div>
+
+    <div class="bottom-buttons ">
+        <div class="col-xs-3 col-xs-offset-9">
+            <div class="btn btn-default btn-sm" ng-click="fnPageMove('main_screen')"> 閉じる</div>
+        </div>
+    </div>
+
+</div>

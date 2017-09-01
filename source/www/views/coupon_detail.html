@@ -1,0 +1,14 @@
+﻿<div class="page-content">
+    <div ng-include="'views/top-toolbar.html'"></div>
+    <div class="coupon-detail" ng-cloak>
+        <div class="custom-nav" >{{shop.name}} > {{coupon.title}}</div>
+        <div class="coupon-content">
+            <div ng-show="coupon.text !=''"> {{coupon.text}}</div>
+            <div ng-show="coupon.text ==''" ng-include="coupon.url"></div>
+        </div>
+        <div class="bottom-buttons">
+            <div class="col-xs-3 col-xs-offset-9">
+                <div class="btn btn-default btn-sm" ng-click="previousPage()" >閉じる</div>
+            </div>
+        </div>
+</div>

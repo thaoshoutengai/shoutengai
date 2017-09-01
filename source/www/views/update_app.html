@@ -1,0 +1,16 @@
+﻿<div class="page-content">
+    <div class="title">お知らせ</div>
+
+    <div class="block-message">
+        <div>ご利用するにはアプリのアップデートが必要です。</div>
+    </div>
+    <div class="block">
+        <ons-if platform="android">
+            <div class="btn btn-sm btn-1" ng-click="appInfo.googleplay_url">アップデート</div>
+        </ons-if>
+        <ons-if platform="ios">
+            <div class="btn btn-sm btn-1" ng-click="appInfo.applestore_url">アップデート</div>
+        </ons-if>
+    </div>
+</div>
+<div ng-include="'views/footer.html'"></div>

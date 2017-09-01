@@ -1,0 +1,446 @@
+/* common */
+
+.page-content {
+    font-family: 'MS PGothic', Osaka, Arial, sans-serif;
+    background-color: transparent;
+    text-align: center;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.vertical-middle {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+input {
+    border: 1px solid #ccc;
+}
+
+input[type=number] {
+    width: 40px;
+}
+
+input[type="date"] + label,
+input[type="time"] + label,
+.custom-select label {
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    color: #ababab;
+}
+
+input[type="date"]:focus + label,
+input[type="time"]:focus + label {
+    display: none;
+}
+
+.btn-1, .btn-1:active {
+    background: #fcd5b5;
+    color: #000;
+    border: 1px solid #ccc !important;
+}
+
+.footer {
+    color: #000;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    font-family: 'MS PGothic', Osaka, Arial, sans-serif;
+    padding-right: 5px;
+    bottom: 0;
+    position: fixed;
+}
+
+.title {
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* map */
+.full-map {
+    height: 100vh;
+    width: 100%;
+}
+
+coupon-list,
+.half-map {
+    height: 40vh;
+    width: 100%;
+    bottom: 0;
+    position: fixed !important;
+}
+
+.bottom-buttons {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+}
+
+/*.bottom-buttons  > div{
+    display:table-cell;
+    vertical-align:bottom;
+}*/
+
+.bottom-buttons .shoutengai-map-btn,
+.bottom-buttons .user-map-btn {
+    white-space: normal;
+    font-size: 10px;
+}
+
+.bottom-buttons .favor-shop-btn {
+    float: left;
+    margin-left: 5px;
+}
+
+/* emergency message in main screen */
+
+.emergency-info {
+    background: red;
+    color: #000;
+    min-height: 30px;
+    line-height: 30px;
+    position: absolute;
+    margin-top: 35px;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* toolbar , nav bar */
+.custom-toolbar {
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    height: 35px;
+    line-height: 30px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    padding: 0 5px;
+}
+
+.custom-toolbar .toolbar-title {
+    float: left;
+}
+
+.custom-toolbar .toolbar-point {
+    float: right;
+    margin: 0 5px;
+}
+
+.custom-toolbar .toolbar-menu {
+    float: right;
+}
+
+.custom-toolbar .menu-btn {
+    font-size: 12px;
+    min-width: 89px;
+}
+
+.custom-toolbar .menu-box {
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 3px;
+    margin: 3px 0px;
+    padding: 0 10px;
+    float: left;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.custom-toolbar .menu-box .header {
+    border-bottom: 1px solid #ccc;
+    margin: 3px -10px;
+}
+
+.custom-nav {
+    text-align: left;
+    padding: 5px;
+    width: 100%;
+}
+
+.block-message {
+    padding: 20px 10px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.block {
+    top: 40%;
+    position: absolute;
+    width: 100%;
+}
+
+/* dialog */
+.dialog-container {
+    background: #fcd5b5;
+    color: #000;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.dialog-container .dialog-btn {
+    width: 25%;
+}
+
+/* register */
+.gender {
+    width: 50px;
+}
+
+.register-form {
+    text-align: left;
+    padding: 10px;
+}
+
+.btn-form-group {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.custom-select {
+    border-radius: 0 !important;
+    height: 25px;
+    width: 154px !important;
+}
+
+/* list box, detail box*/
+
+.list-box {
+    margin: 10px 0;
+    width: 100%;
+
+}
+
+.list-box thead {
+    display: block;
+
+}
+
+.list-box tbody {
+    overflow: overlay;
+    height: 25vh;
+    display: block;
+
+}
+
+.list-box tr {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+}
+
+.list-box td {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+    padding: 2px;
+}
+
+.list-box tbody tr:last-child td {
+    border-bottom: 1px solid #000;
+}
+
+.list-box tr td:last-child {
+    border: none;
+}
+
+.list-box tr:last-child td:last-child {
+    border: none;
+}
+
+.list-box .btn {
+    padding: 0px 5px;
+}
+
+.detail-box {
+    font-size: 12px;
+    padding-right: 0 !important;
+}
+
+.detail-box .row {
+    border-top: 1px solid #000;
+}
+
+.detail-box .row:last-child {
+    border-bottom: 1px solid #000;
+}
+
+.detail-box .col {
+    border-left: 1px solid #000;
+    padding: 0 !important;
+}
+
+.detail-box .col:last-child {
+    border-right: 1px solid #000;
+    padding: 0 !important;
+}
+
+.information,
+.introduction,
+.point-list,
+.point-detail,
+.event-list,
+.event-detail,
+.coupon-detail,
+.reservation,
+.shop-detail,
+.shop-list {
+    padding: 35px 5px 5px;
+    height: 55vh;
+    width: 100%;
+}
+
+/* shop */
+.shop-category div {
+    text-decoration: underline;
+}
+
+.shop-picture {
+    display: table;
+    width: 100%;
+    border: 1px solid #000;
+    height: 60%;
+}
+
+.shop-share-btn {
+    margin: 10px;
+    color: #000;
+    background-color: #92d050;
+    border: 1px solid #000 !important;
+    width: 110px;
+    padding: 2px 10px !important;
+}
+
+/* coupon */
+.coupon-info {
+    display: table;
+    width: 100%;
+    border: 1px solid;
+    height: 100%;
+}
+
+.coupon-list {
+    height: 40vh;
+    width: 100%;
+    bottom: 30px;
+    position: fixed !important;
+    padding: 0 5px;
+}
+
+/* reservation */
+.reservation-form {
+    padding: 10px;
+    text-align: left;
+}
+
+.reservation-form .form-group {
+    margin-bottom: 5px;
+}
+
+.row-2-col input {
+    width: 20%;
+}
+
+/* event */
+.event-year {
+    float: left;
+    padding: 5px 20px;
+}
+
+.event-year .this-year {
+    text-decoration: underline;
+}
+
+.event-year input {
+    width: 80px;
+}
+
+.event-picture {
+    display: table;
+    width: 100%;
+    border: 1px solid #000;
+    height: 100%;
+}
+
+/* information */
+.info-box {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.info-box thead {
+    display: block;
+
+}
+
+.info-box tbody {
+    overflow: overlay;
+    height: 25vh;
+    display: block;
+
+}
+
+.info-box tr {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+}
+
+.info-box td {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+    padding: 2px;
+}
+
+.info-box tbody tr:last-child td {
+    border-bottom: 1px solid #000;
+}
+
+.market-picture {
+    display: table;
+    width: 100%;
+    border: 1px solid #000;
+    height: 100%;
+}
+
+/* introduction */
+.introduction-box {
+    font-size: 12px;
+    padding: 0 !important;
+}
+
+.introduction-box .col:last-child {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+.introduction-box .row:last-child .col:last-child {
+    border-bottom: 1px solid #000;
+}

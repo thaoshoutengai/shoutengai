@@ -1,0 +1,81 @@
+﻿<div class="page-content">
+    <div ng-include="'views/top-toolbar.html'"></div>
+    <div class="shop-detail">
+        <div class="custom-nav">{{shop.name}}</div>
+        <div class="row row-eq-height no-margin">
+            <div class="col-xs-6 no-padding">
+                <div class="shop-picture"> <div class="vertical-middle">{{shop.picture1_url}}</div> </div>
+                <div class="btn btn-sm shop-share-btn">
+                    Twitterでシェア
+                </div>
+                <div class="btn btn-sm shop-share-btn">
+                    Facebookでシェア
+                </div>
+            </div>
+
+            <div class="detail-box col-xs-6">
+                <div class="row row-eq-height no-margin ">
+                    <div class="col col-xs-6"> 店舗名 </div>
+                    <div class="col col-xs-6"> {{shop.name}}</div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6"> 店舗名（カナ） </div>
+                    <div class="col col-xs-6"> {{shop.name_kana}}</div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6"> 代表者  </div>
+                    <div class="col col-xs-6"> {{shop.owner_name}}</div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6"> 営業時間 </div>
+                    <div class="col col-xs-6"> {{shop.business_hours}}</div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6"> 定休日 </div>
+                    <div class="col col-xs-6"> {{shop.holiday}}</div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6">住所</div>
+                    <div class="col col-xs-6"> {{shop.address}}</div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6">TEL</div>
+                    <div class="col col-xs-6"> {{shop.tel}}</div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6">FAX</div>
+                    <div class="col col-xs-6"> {{shop.fax}}</div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6">URL</div>
+                    <div class="col col-xs-6"> {{shop.website_url}}</div>
+                </div>
+                <div class="row row-eq-height no-margin">
+                    <div class="col col-xs-6">E-mail</div>
+                    <div class="col col-xs-6">{{shop.email}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="map_canvas" class="half-map" ng-hide="isShowCoupons"></div>
+    <div ng-show="isShowCoupons">
+        <div ng-include="'views/coupon_list.html'" ng-cloak></div>
+    </div>
+    <div class="bottom-buttons ">
+        <div class="col-xs-3">
+            <div class="btn btn-default btn-sm">電話</div>
+        </div>
+        <div class="col-xs-3">
+            <div class="btn btn-default btn-sm"  ng-click="fnPageMove('reservation', {id:currentShopId})">予約</div>
+        </div>
+        <div class="col-xs-3">
+            <div class="btn btn-default btn-sm" ng-click="showCoupons()">クーポン</div> 
+        </div>
+        <div class="col-xs-3">
+            <div class="btn btn-default btn-sm" ng-click="fnPageMove('main_screen')"> 閉じる</div>
+        </div>
+    </div>
+
+
+</div>

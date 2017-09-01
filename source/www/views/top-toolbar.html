@@ -1,0 +1,29 @@
+﻿<div class="custom-toolbar">
+    <span class="toolbar-title">{{  app_configuration.shoutengai_name}}</span>
+    
+    
+    <span class="toolbar-menu">
+        <span class="menu-btn" ng-hide="isShowMenuBox">
+            <span class="btn btn-default btn-sm menu-btn" ng-click="showMenuBox()">
+                メニュー
+            </span>
+        </span>
+        <span class="menu-box" ng-show="isShowMenuBox">
+            <div class="header" ng-click="showMenuBox()"> メニュー</div>
+            <div ng-click ="showMenuBox('shop_list')" > 店舗情報</div>
+            <div ng-click ="showMenuBox('event_list')" > イベント情報</div>
+            <div ng-click ="showMenuBox('point_list')" > ポイント情報</div>
+            <div ng-click ="showMenuBox('information')" > お知らせ</div>
+            <div ng-click ="showMenuBox('introduction')"> 商店街紹介</div>
+            <!--<div ng-click="showMenuBox()">戻る</div>-->
+        </span>
+    </span>   
+    <span class="toolbar-point">1,000p</span>     
+    </div>
+
+<ons-dialog  var="dialog">
+    <div class="dialog-box">
+        <p>{{point_message}}</p>
+        <button class="btn btn-default btn-sm dialog-btn" ng-click="dialog.hide()">OK</button>
+    </div>
+</ons-dialog>

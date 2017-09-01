@@ -1,0 +1,22 @@
+﻿<div class="page-content">
+    <div ng-include="'views/top-toolbar.html'"></div>
+    <div class="emergency-info" ng-show="isShowEmergency">【緊急】XXXXXXXXXXXXXXXXX </div>
+    <div id="map_canvas" class="full-map"></div>
+    <div class="row bottom-buttons ">
+        <div class="col-xs-6">
+            <div class="btn btn-default btn-sm favor-shop-btn" ng-click="fnPageMove('shop_detail', {id : favoriteShopId})">
+                お気に入り店舗クーポン
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="btn btn-default btn-xs shoutengai-map-btn" ng-click="moveToShoutengai()">
+                商店街へ移動
+            </div>
+        </div>
+        <div class="col-xs-3 no-padding">
+            <div class="btn btn-default btn-xs user-map-btn" ng-click="moveToUser()">
+                現在位置へ移動
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+﻿<div class="page-content">
+    <div ng-include="'views/top-toolbar.html'"></div>
+    <div class="reservation">
+        <div class="reservation-form" ng-hide="isShowMessage">
+            <div class="form-group row-2-col">
+                <div class="col-xs-4 no-padding">予約者名</div>
+                <input type="text" />
+                <span>予約人数</span>
+                <input type="text" />
+            </div>
+            <div class="form-group ">
+                <div class="col-xs-4 no-padding">予約内容</div>
+                <input type="text" />
+            </div>
+            <div class="form-group">
+                <div class="col-xs-4 no-padding">連絡先（TEL）</div>
+                <input type="text" />
+            </div>
+            <div class="form-group">
+                <div class="col-xs-4 no-padding">連絡先（メール）</div>
+                <input type="text" />
+            </div>
+            <div class="form-group">
+                <div class="col-xs-4 no-padding">
+                    希望予約日時
+                </div>
+                <div class="col-xs-8 no-padding" style="position: relative">
+                    <!--<span> <input type="number" maxlength="4" class="year" /> 年</span>-->
+                    <!--<span> <input type="number" maxlength="2" class="month" /> 月</span>-->
+                    <!--<span> <input type="number" maxlength="2" class="day" /> 日</span>-->
+                    <input type="date" class="custom-select" placeholder="日月年" ng-model="date"/>
+                    <label ng-if="date == null" class="dropdown-placeholder">日月年</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-4 no-padding">
+                </div>
+                <div class="col-xs-8 no-padding" style="position: relative">
+                    <!--<span> <input type="number" maxlength="2" class="hour" /> 時</span>-->
+                    <!--<span> <input type="number" maxlength="2" class="minute" /> 分</span>-->
+                    <input type="time" class="custom-select" placeholder="時間" ng-model="time"/>
+                    <label ng-if="time == null" class="dropdown-placeholder">時間</label>
+                </div>
+            </div>
+        </div>
+        <div class="btn btn-sm btn-default" ng-click="showMessage()" ng-hide="isShowMessage">店舗へ連絡する</div>
+
+        <div class="reservation-form" ng-show="isShowMessage">
+            <div> 店舗へ予約連絡をしました。</div>
+            <div> 現時点ではまだ予約は確定していません。</div>
+            <div> 店舗からの折り返しの連絡があり、予約が確定します。</div>
+        </div>
+    </div>
+
+    <div id="map_canvas" class="half-map"></div>
+    
+    <div class="bottom-buttons ">
+        <div class="col-xs-3">
+            <div class="btn btn-default btn-sm">
+                電話
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="btn btn-default btn-sm" ng-click="fnPageMove('shop_detail', {id:currentShopId})">
+                店舗情報
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="btn btn-default btn-sm" ng-click="fnPageMove('coupon_detail', {id:currentShopId})">
+                クーポン
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="btn btn-default btn-sm" ng-click="fnPageMove('main_screen')">
+                閉じる
+            </div>
+        </div>
+    </div>
+</div>

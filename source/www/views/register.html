@@ -1,0 +1,71 @@
+﻿<div class="page-content">
+    <div class="title">{{ 'TERM_OF_USE' | translate }}</div>
+    <div class="register-form">
+        <div class="form-group row">
+            <div class="col-xs-5">{{ 'NICK_NAME' | translate }}</div>
+            <div><input type="text" ng-model="username"/></div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-5">{{ 'EMAIL' | translate }}</div>
+            <div><input type="text" ng-model="email"/></div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-5">{{ 'EMAIL' | translate }}（{{ 'CONFIRM' | translate }}）</div>
+            <div><input type="text" ng-model="email_confirm"/></div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-5">{{ 'DATE_OF_BIRTH' | translate }}</div>
+            <div style="position: relative; display: inline-block;">
+                <!-- <span> <input type="year" maxlength="4" class="year" />年</span>
+                <span> <input type="month" maxlength="2" class="month" />月</span>
+                <span> <input type="date" maxlength="2" class="day" />日</span> -->
+                <input type="date" maxlength="2" class="custom-select" ng-model="date"/>
+                <label ng-if="date == null" class="dropdown-placeholder">日月年</label>
+            </div>
+
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-5">{{ 'GENDER' | translate }}（{{ 'OPTIONAL' | translate }}）</div>
+            <div>
+                <select class="custom-select">
+                    <option value="男性">{{ 'MALE' | translate }}</option>
+                    <option value="女性">{{ 'FEMALE' | translate }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-5">{{ 'JOB' | translate }}</div>
+            <div>
+                <select class="custom-select">
+                    <option value="">{{ 'EMPLOYEE' | translate }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-5">{{ 'HOW_OFTEN_DO_YOU_GO_TO_SHOUTENGAI' | translate }}</div>
+            <div>
+                <select class="custom-select">
+                    <option value="">{{ 'ALMOST_EVERY_DAY' | translate }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-5">{{ 'FAVORITE_SHOP' | translate }}</div>
+            <div><input type="text"/></div>
+        </div>
+        <div class="form-group row">
+            <div class="btn-form-group">
+                <button class="btn btn-sm btn-1" ng-click="register()">{{ 'SIGN_UP' | translate }}</button>
+            </div>
+        </div>
+    </div>
+
+    <ons-dialog var="dialog">
+        <div class="dialog-box">
+            <p> {{alert_message}}</p>
+            <button class="btn btn-default btn-sm dialog-btn" ng-click="dialog.hide()">OK</button>
+        </div>
+    </ons-dialog>
+    <div ng-include="'views/footer.html'"></div>
+    <!--<ons-button ng-click="myNavigator.pushPage('views/register.html', {data: {title: 'Page 2'}})">Push page</ons-button>-->
+</div>
